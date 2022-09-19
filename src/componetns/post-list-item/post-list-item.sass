@@ -1,0 +1,53 @@
+.app-list-item
+    font-size: 1.2rem
+    display: flex
+    justify-content: space-between
+    padding: 10px 25px 10px 30px
+    border-radius: 2px
+    margin-bottom: 10px
+    background-color: white
+    transition: all 0.1s linear
+    &:hover
+        box-shadow: 0 0 8px  0 grey
+    .app-list-item-label 
+        display: block
+        line-height: 35px
+        cursor: pointer
+        user-select: none
+        transition: 0.2s all
+        &:hover
+            color: rgb(89, 174, 249)
+    .app-list-item-btns
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:focus 
+            box-shadow: none
+            outline: none
+        .app-list-item-button
+            width: 35px
+            height: 35px
+            margin: 3px
+            font-size: 17px
+            border: none
+            cursor: pointer
+            background-color: white
+.fa-star
+    color: yellow
+.fa-trash-can
+    color: rgb(227, 119, 119)
+    transition: 0.3s all
+.fa-heart
+    color: red
+    opacity: 0
+    transform: translateX(30px)
+    transition: 0.3s all
+.app-list-item.like .fa-heart
+    opacity: 1
+    transform: translateX(0px)
+.app-list-item.important  
+    color: #FFD700
+.app-list-item.important .fa-star 
+    color: #aeaeae
+.app-list-item.trash
+    display: none
